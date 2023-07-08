@@ -1,1 +1,13 @@
-<p>lista works!</p>
+<div class="container">
+    <h2>Lista de Resultados</h2>
+    <div *ngFor="let item of items" class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.id }}</h5>
+        <p class="card-text">Nombre: {{ item.name }}</p>
+        <p class="card-text">Apellido: {{ item.lastName }}</p>
+        <p class="card-text">Posición: {{ item.position }}</p>
+        <p class="card-text">Salario: {{ item.salary }}</p>
+      </div>
+    </div>
+  </div>
+  

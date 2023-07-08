@@ -1,1 +1,29 @@
-<p>formulario works!</p>
+<div class="container">
+    <h2>Formulario</h2>
+    <form (ngSubmit)="agregarResultado()">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" class="form-control" id="id" name="id" [(ngModel)]="formData.id" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="formData.name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Apellido:</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="formData.lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="position">Posición:</label>
+        <input type="text" class="form-control" id="position" name="position" [(ngModel)]="formData.position" required>
+      </div>
+      <div class="form-group">
+        <label for="salary">Salario:</label>
+        <input type="text" class="form-control" id="salary" name="salary" [(ngModel)]="formData.salary" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+
+    <app-lista [items]="items"></app-lista>
+  </div>
+  

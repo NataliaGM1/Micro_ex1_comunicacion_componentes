@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lista',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./lista.component.scss']
 })
 export class ListaComponent {
+  @Input() items: any[] = [];
+
+  agregarItem(item: any) {
+    this.items.push(item);
+  }
 
 }
