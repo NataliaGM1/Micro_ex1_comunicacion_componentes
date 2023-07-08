@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ListaComponent {
   @Input() items: any[] = [];
+  @Output() agregarCaracteristicas = new EventEmitter<any>();
 
   agregarItem(item: any) {
     this.items.push(item);
+    this.agregarCaracteristicas.emit(item);
   }
 
 }

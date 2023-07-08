@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ListaComponent } from './lista/lista.component';
+import { CaracteristicasComponent } from './caracteristicas/caracteristicas.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    ListaComponent
+    ListaComponent,
+    CaracteristicasComponent
   ],
   imports: [
     BrowserModule,

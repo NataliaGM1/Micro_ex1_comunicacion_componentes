@@ -8,21 +8,23 @@ import { ListaComponent } from '../lista/lista.component';
   styleUrls: ['./formulario.component.scss']
 })
 export class FormularioComponent {
-  // formData: any = {};
-
-  // constructor(private listaComponent: ListaComponent) {}
-
-  // agregarResultado() {
-  //   this.listaComponent.agregarItem(this.formData);
-  //   this.formData = {};
-  // }
-  items: any[] = [];
+ 
+    items: any[] = [];
+    caracteristicas: any[] = [];
 
   agregarResultado() {
     this.items.push(this.formData);
     this.formData = {};
+
+    this.caracteristicas.push(...this.formData.caracteristicas);
+    this.formData.caracteristicas = [];
   }
   
+  
   formData: any = {};
+
+  agregarCaracteristicas(caracteristicas: any) {
+    this.caracteristicas.push(caracteristicas);
+  }
 
 }

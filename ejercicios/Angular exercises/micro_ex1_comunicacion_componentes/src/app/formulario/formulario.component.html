@@ -23,7 +23,23 @@
       </div>
       <button type="submit" class="btn btn-primary">Agregar</button>
     </form>
-
     <app-lista [items]="items"></app-lista>
+    <!-- <h2>Lista de Resultados</h2> -->
+    <div class="resultados">
+      <div class="resultado" *ngFor="let item of items">
+        <div class="id">{{ item.id }}</div>
+        <div class="name">{{ item.name }}</div>
+        <div class="lastName">{{ item.lastName }}</div>
+        <div class="position">{{ item.position }}</div>
+        <div class="salary">{{ item.salary }}</div>
+      </div>
+    </div>
+
+    
+  
+    <app-caracteristicas (agregarCaracteristicas)="agregarCaracteristicas($event)"></app-caracteristicas>
+  
+
+    
   </div>
   
